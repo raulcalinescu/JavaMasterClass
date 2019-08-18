@@ -1,6 +1,7 @@
 package section5.controlflow.statements;
 
 public class PrimeNumbers {
+    //check if a number is a prime number
 
     public static boolean isPrime (int n) {
         if(n == 1) return false;
@@ -23,7 +24,7 @@ public class PrimeNumbers {
 
     public static void main(String[] args) {
         printEven();
-        System.out.println(isPrime(34));
+        System.out.println("\n" + isPrime( 34));
     }
 
 }
