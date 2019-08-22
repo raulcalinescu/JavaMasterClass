@@ -25,6 +25,7 @@ public class PrimeNumbers {
     public static void main(String[] args) {
         printEven();
         System.out.println("\n" + isPrime( 34));
+        System.out.println("this sucks");
     }
 
 }
