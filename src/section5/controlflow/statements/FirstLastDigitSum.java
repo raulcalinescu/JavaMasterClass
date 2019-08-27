@@ -6,7 +6,7 @@ public class FirstLastDigitSum {
         if (number < 0)
             return -1;
         else {
-            int sum = 0, first = 0;
+            int sum, first = 0;
             int last = number % 10;
 
             while (number > 0) {
