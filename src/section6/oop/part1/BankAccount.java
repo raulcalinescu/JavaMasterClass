@@ -19,8 +19,8 @@ public class BankAccount {
     public BankAccount (String number, double balance, String customerName, String customerEmail,
                         String customerPhoneNr) {
         System.out.println("BankAccount constr called with params");
-        this.number = number;
-        this.balance = balance;
+        this.number = number;                                   // you can also use the setters instead of this but this
+        this.balance = balance;                                     // is preferred as setter might not get called.
         this.customerName = customerName;
         this.customerEmail = customerEmail;
         this.customerPhoneNr = customerPhoneNr;
