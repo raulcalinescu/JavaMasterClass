@@ -1,4 +1,4 @@
-package section6.oop.part1;
+package section6.oop.constructors_inheritance;
 
 public class BankAccount {
 
