@@ -10,7 +10,8 @@ public class BankAccount {
 
     public BankAccount () {
         this("56789", 2.50, "Default name", "Default address",
-                "default phone");
+                "default phone");    // this calls the next constructor which will be printed first
+                                                        // when creating a new object of this class.
 
         System.out.println("Empty constr called");
     }
