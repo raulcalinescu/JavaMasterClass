@@ -30,16 +30,16 @@ public class Point {
         this.y = y;
     }
 
-    public double distance() {  // Calculate distance from this point to a point zero
+    public double distance() {  // Calculate distance from this point to origin or point zero
         Point zero = new Point(0,0);
         return Math.sqrt(Math.pow((zero.x - this.x),2) + Math.pow((zero.y - this.y),2));
     }
 
-    public double distance(int x, int y) {
+    public double distance(int x, int y) { //distance from this point to x,y point
         return Math.sqrt(Math.pow((x - this.x),2) + Math.pow((y - this.y),2));
     }
 
-    public double distance(Point another) {
+    public double distance(Point another) {   // distance from this point to another point
         return Math.sqrt(Math.pow((another.getX() - this.x),2) + Math.pow((another.getY() - this.y),2));
     }
 }
