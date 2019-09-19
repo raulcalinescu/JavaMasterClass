@@ -1,7 +1,7 @@
 package section6.oop.constructors_inheritance;
 
 public class Cylinder extends Circle {
-    public double height;
+    private double height;                  // declare instance variables (fields) as private
 
     public Cylinder(double radius, double height) {
         super(radius);
@@ -15,7 +15,7 @@ public class Cylinder extends Circle {
         return this.height;
     }
 
-    public double Volume() {
+    public double getVolume() {
         return this.height * this.getArea();
     }
 }

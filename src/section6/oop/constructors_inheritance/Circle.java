@@ -2,7 +2,7 @@ package section6.oop.constructors_inheritance;
 
 public class Circle {
 
-    public double radius;
+    private double radius;
 
     public Circle(double radius) {
         if (radius < 0) {
