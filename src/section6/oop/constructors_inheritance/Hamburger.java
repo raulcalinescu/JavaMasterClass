@@ -10,6 +10,7 @@ public class Hamburger {
    private double totalPrice = 0.0;
    private int additionalItem = 0;
 
+
    public Hamburger() {
        Item breadRoll = new Item("Standard", 1.0);
        setBreadRoll(breadRoll);
@@ -23,19 +24,28 @@ public class Hamburger {
                case "tomato": {
                    setTomato(1.0);
                    additionalItem++;
+                   addToTotalPrice(this.tomato);
+                   break;
                }
                case "lettuce": {
                    setLettuce(1.0);
                    additionalItem++;
+                   addToTotalPrice(this.lettuce);
+                   break;
                }
                case "pickles": {
                    setPickles(1.0);
                    additionalItem++;
+                   addToTotalPrice(this.pickles);
+                   break;
                }
                case "onions": {
                    setOnions(1.0);
                    additionalItem++;
+                   addToTotalPrice(this.onions);
+                   break;
                }
+               default: System.out.println("Invalid item");
            }
        } else {
            System.out.print("You have reached the maximum number of items allowed for this type of Burger");
@@ -43,7 +53,9 @@ public class Hamburger {
    }
 
    public double getPrice() {
-       this.totalPrice = getMeat() + getBreadRoll().getPrice() + getLettuce() + getOnions() + getPickles() + getTomato();
+       System.out.println("The price of your burger is " + this.totalPrice + "with " + additionalItem + " items");
+       System.out.println("Your burger contains burger patty on a " + getBreadRoll().getName() + " bun type");
+       System.out.println("The additional items are: \n" );
        return this.totalPrice;
    }
 
