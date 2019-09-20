@@ -48,7 +48,7 @@ public class Hamburger {
                default: System.out.println("Invalid item");
            }
        } else {
-           System.out.print("You have reached the maximum number of items allowed for this type of Burger");
+           System.out.print("You have reached the maximum number of items allowed for Standard Burger");
        }
    }
 
