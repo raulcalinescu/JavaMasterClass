@@ -1,4 +1,4 @@
-package section6.oop.constructors_inheritance;
+package section6_7.oop.constructors_inheritance;
 
 public class Circle {
 

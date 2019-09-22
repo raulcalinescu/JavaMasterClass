@@ -1,4 +1,4 @@
-package section6.oop.constructors_inheritance;
+package section6_7.oop.constructors_inheritance;
 
 public class Cylinder extends Circle {
     private double height;                  // declare instance variables (fields) as private

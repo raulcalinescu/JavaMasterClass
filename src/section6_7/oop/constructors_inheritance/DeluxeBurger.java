@@ -1,4 +1,4 @@
-package section6.oop.constructors_inheritance;
+package section6_7.oop.constructors_inheritance;
 
 public class DeluxeBurger extends Hamburger {
 
@@ -7,10 +7,10 @@ public class DeluxeBurger extends Hamburger {
     private String additionalItem6 = "drinks";
     private double additionalItem6price = 2.15;
 
-    public DeluxeBurger(String meat, String rollType, double burgerPrice) {
-        super(meat, rollType, burgerPrice);
-        super.burgerPrice += this.additionalItem5price;
-        super.burgerPrice += this.additionalItem6price;
+    public DeluxeBurger() {
+        super("Deluxe", "sausage", "white", 14.54);
+        super.setAdditionalItem1("Chips",2.75);
+        super.setAdditionalItem2("drinks", 4.75);
 
     }
 
@@ -22,6 +22,7 @@ public class DeluxeBurger extends Hamburger {
 
     @Override
     public void setAdditionalItem1(String additionalItem1, double additionalItem1price) {
+        System.out.println("Cannot add additional items for a deluxe burger");
     }
 
     @Override

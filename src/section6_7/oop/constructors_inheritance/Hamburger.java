@@ -1,7 +1,7 @@
-package section6.oop.constructors_inheritance;
+package section6_7.oop.constructors_inheritance;
 
 public class Hamburger {
-
+    public String name;
     private String meat;
     public String rollType;
     public double burgerPrice;
@@ -18,7 +18,8 @@ public class Hamburger {
     private String additionalItem4;
     private double additionalItem4price;
 
-    public Hamburger(String meat, String rollType, double burgerPrice) {
+    public Hamburger(String name, String meat, String rollType, double burgerPrice) {
+        this.name = name;
         this.meat = meat;
         this.rollType = rollType;
         this.burgerPrice = burgerPrice;
@@ -38,7 +39,7 @@ public class Hamburger {
             this.burgerPrice += this.additionalItem4price;
         }
 
-        System.out.println("My burger has " + this.meat + " meat on a " + this.rollType + " bread, at the price of " +
+        System.out.println("My " + this.name + " burger has " + this.meat + " meat on a " + this.rollType + " bread, at the price of " +
                 this.burgerPrice +" \n");
     }
 
