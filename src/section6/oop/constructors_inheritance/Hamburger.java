@@ -3,8 +3,8 @@ package section6.oop.constructors_inheritance;
 public class Hamburger {
 
     private String meat;
-    private String rollType;
-    private double burgerPrice;
+    public String rollType;
+    public double burgerPrice;
 
     private String additionalItem1;
     private double additionalItem1price;
@@ -37,7 +37,9 @@ public class Hamburger {
         if(additionalItem4 != null) {
             this.burgerPrice += this.additionalItem4price;
         }
-        System.out.println("My burger has " + this.meat + " meat on a " + this.rollType + " bread, at the price of " + this.burgerPrice +" \n");
+
+        System.out.println("My burger has " + this.meat + " meat on a " + this.rollType + " bread, at the price of " +
+                this.burgerPrice +" \n");
     }
 
     public void setAdditionalItem1(String additionalItem1, double additionalItem1price) {

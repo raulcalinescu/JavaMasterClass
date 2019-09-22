@@ -31,5 +31,16 @@ public class OOP_Master_Challenge_Bills_Burgers {
       classic.setAdditionalItem1("tomato",1.75);
       classic.myBurger();
 
+      HealthyBurger health = new HealthyBurger("vegan meat", 4.0, "brown rye");
+      health.myBurger();
+      health.setAdditionalItem1("tomato", 1);
+      health.setAdditionalItem2("lettuce", 1);
+      health.setAdditionalItem3("onion", 0.75);
+      health.setAdditionalItem4("pickles", 1);
+      health.setAdditionalItem5("avocado", 2.15);
+      health.myBurger();
+
+
+
     }
 }
