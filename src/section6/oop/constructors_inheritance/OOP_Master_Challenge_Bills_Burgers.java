@@ -26,10 +26,10 @@ Subclasses -> add totals to the final price.
 public class OOP_Master_Challenge_Bills_Burgers {
 
     public static void main(String[] args) {
-        HealthyBurger myburger = new HealthyBurger();
-        myburger.addItem("lettuce");
-        myburger.addItem("tomato");
-        myburger.addItem("spinach");
-        myburger.getPrice();
+      Hamburger classic = new Hamburger("patty", "white", 3.75);
+      classic.myBurger();
+      classic.setAdditionalItem1("tomato",1.75);
+      classic.myBurger();
+
     }
 }
