@@ -50,7 +50,7 @@ public class ArraySorting {
 
     public static void printArray(int[] a) {
         for (int i = 0; i < a.length; i++) {
-            System.out.println("element " + i + " contents " + a[i]);
+            System.out.println("element " + i + " contains " + a[i]);
         }
     }
 }
