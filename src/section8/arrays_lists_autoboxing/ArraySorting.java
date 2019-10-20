@@ -25,7 +25,7 @@ public class ArraySorting {
     }
 
     public static int[] sortIntegers(int[] a) {
-        int[] sorted = new int[a.length];         // creating an array that is same value as what is passed to us
+        int[] sorted = new int[a.length];         // creating an array that is same length as what is passed to us
         for(int i = 0; i < a.length; i++) {
             sorted[i] = a[i];
         }
