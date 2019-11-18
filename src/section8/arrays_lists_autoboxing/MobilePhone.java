@@ -32,8 +32,19 @@ public class MobilePhone {
         return true;
     }
 
-    private int findContact(Contact contact) {
-        return this.myContacts.indexOf(contact);
+    public boolean removeContact(Contact contact) {
+        int foundPosition = findContact(contact);
+        if(foundPosition < 0) {
+            System.out.println(contact.getName() + " was not found ");
+            return false;
+        }
+        this.myContacts.remove(foundPosition);
+        System.out.println(contact.getName() + " was deleted ");
+        return true;
+    }
+
+    private int findContact(Contact contact) {    // we use private for the classes that we don't want to be exposed
+        return this.myContacts.indexOf(contact);        // and we can see they use int for our array, don't want to expose
     }
 
     private int findContact(String contactName) {
@@ -44,5 +55,20 @@ public class MobilePhone {
             }
         }
         return -1;                  // if there is no contact return -1 as false.
+    }
+
+    public String querryContact(Contact contact) {
+        if(findContact(contact) >= 0) {
+            return contact.getName();
+        }
+        return null;
+    }
+
+    public void printContacts() {
+        System.out.println("Contact List");
+        for(int i=0; i<this.myContacts.size(); i++) {
+            System.out.println((i+1) + "." + this.myContacts.get(i).getName() + " -> " +
+                                            this.myContacts.get(i).getPhoneNumber());
+        }
     }
 }
