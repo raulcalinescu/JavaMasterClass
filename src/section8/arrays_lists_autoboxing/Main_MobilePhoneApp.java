@@ -59,6 +59,20 @@ public class Main_MobilePhoneApp {
         }
     }
 
+    private static void updateContact() {
+        System.out.println("Enter the name for contact to update: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter the old phone number: ");
+        String phone = scanner.nextLine();
+        Contact newContact = Contact.createContact(name, phone);   // this is possible as we create a static Contact instance
+        // to createContact
+        if(mobilePhone.addNewContact(newContact)) {
+            System.out.println("New contact added: name - " + name + " phone = " + phone);
+        } else {
+            System.out.println("Could not add the name typed");
+        }
+    }
+
     private static void startPhone() {
         System.out.println("Starting phone...");
     }
