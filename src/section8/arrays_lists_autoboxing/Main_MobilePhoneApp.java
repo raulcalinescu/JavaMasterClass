@@ -73,8 +73,13 @@ public class Main_MobilePhoneApp {
         String newPhone = scanner.nextLine();
         Contact newContact = Contact.createContact(newName, newPhone);   // this is possible as we create a static Contact instance
         // to createContact
+        if (mobilePhone.querryContact(newContact) != null) {
+            mobilePhone.updateContact(oldContact, newContact);
+        }
 
-        mobilePhone.updateContact(oldContact,newContact);
+        else {
+            System.out.println("Failure");
+        }
     }
 
     private static void removeContact() {
@@ -97,7 +102,7 @@ public class Main_MobilePhoneApp {
     }
 
     private static void queryContact() {
-        System.out.println("Enter the contact name to be removed: ");
+        System.out.println("Enter the contact name to be queried: ");
         String name = scanner.nextLine();
         Contact existingContactRecord = mobilePhone.queryContact(name);
 
@@ -108,7 +113,7 @@ public class Main_MobilePhoneApp {
         }
 
 
-        System.out.println("Name" + existingContactRecord.getName() + "and phone " + existingContactRecord.getPhoneNumber());
+        System.out.println("Found Name" + existingContactRecord.getName() + "with phone " + existingContactRecord.getPhoneNumber());
     }
 
     private static void startPhone() {
