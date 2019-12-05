@@ -18,7 +18,7 @@ public class Retire_Investment {
 
         System.out.println("With a starting sum of $" + sum + ": \n");
 
-        for(int i = 1; i <= 30; i++) {
+        for(int i = 1; i <= 40; i++) {
             if (i <= years)
                 sum = (monthlyAdd * 12) + sum + sum * 0.1;
             else
