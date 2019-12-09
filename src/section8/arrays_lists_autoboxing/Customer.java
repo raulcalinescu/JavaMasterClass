@@ -20,8 +20,10 @@ public class Customer {
         Customer.name = name;
     }
 
-    public static ArrayList<Double> getTransactions() {
-        return transactions;
+    public static void getTransactions() {
+        for (int i = 0; i < transactions.size(); i++) {
+            System.out.println(transactions.get(i));
+        }
     }
 
     public static void setTransactions(ArrayList<Double> transactions) {
@@ -31,4 +33,5 @@ public class Customer {
     public static void addTransaction(Double transaction) {
         transactions.add(transaction);
     }
+
 }
