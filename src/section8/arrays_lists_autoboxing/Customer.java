@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 public class Customer {
 
-    public static String name;
-    public static ArrayList<Double> transactions = new ArrayList<Double>();
+    private static String name;
+    private static ArrayList<Double> transactions;
 
-    public Customer(String name, Double transaction) {
+    public Customer(String name, double transaction) {
         this.name = name;
-        this.transactions.add(transaction);
+        this.transactions = new ArrayList<Double>();
+        transactions.add(transaction);
     }
 
     public static String getName() {
@@ -30,7 +31,7 @@ public class Customer {
         Customer.transactions = transactions;
     }
 
-    public static void addTransaction(Double transaction) {
+    public static void addTransaction(double transaction) {
         transactions.add(transaction);
     }
 

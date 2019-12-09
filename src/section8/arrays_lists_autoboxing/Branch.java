@@ -4,7 +4,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Branch {
+
+    private String name;
     private static ArrayList<Customer> customers = new ArrayList<Customer>();
+
+    public Branch(String name) {
+        this.name = name;
+        this.customers = new ArrayList<Customer>();
+    }
+
+
+    // make methods boolean to also check/return for data validation when setting new items
 
     public static void addNewCustomer (String newCustomer, Double initialTransaction) {
         Customer customer = new Customer (newCustomer,initialTransaction);
