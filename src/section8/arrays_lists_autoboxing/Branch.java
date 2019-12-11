@@ -16,12 +16,26 @@ public class Branch {
 
     // make methods boolean to also check/return for data validation when setting new items
 
-    public static void addNewCustomer (String newCustomer, Double initialTransaction) {
+    public static boolean addNewCustomer (String newCustomer, Double initialTransaction) {
+        if (findCustomer(newCustomer)) {
+            return false;
+        }
         Customer customer = new Customer (newCustomer,initialTransaction);
+        customers.add(customer);
+        return true;
     }
 
     public static void addTransactionFor (Customer existingCustomer, Double transaction) {
         existingCustomer.addTransaction(transaction);
+    }
+
+    public static boolean findCustomer(String customer) {
+        for (int i = 0; i < customers.size(); i++) {
+            if(customers.get(i).getName().equals(customer)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void listCustomers () {
