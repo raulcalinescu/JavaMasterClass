@@ -12,7 +12,7 @@ public class Main_MobilePhoneApp {
         printActions();
 
         while(!quit) {
-            System.out.println("\nEnter action: (6 to show available actions)");
+            System.out.println("\n Enter action: (6 to show available actions)");
             int action = scanner.nextInt();
             scanner.nextLine();
 
