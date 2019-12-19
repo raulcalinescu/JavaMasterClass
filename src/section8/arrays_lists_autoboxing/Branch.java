@@ -20,12 +20,16 @@ public class Branch {
     // make methods boolean to also check/return for data validation when setting new items
 
     public boolean addNewCustomer (String newCustomer, Double initialTransaction) {
-        if (findCustomer(newCustomer) != null) {
-            return false;
+        if (findCustomer(newCustomer) == null) {
+            this.customers.add(new Customer(newCustomer, initialTransaction));
+            return true;
         }
-        Customer customer = new Customer (newCustomer,initialTransaction);
-        customers.add(customer);
-        return true;
+
+        return false;
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
     }
 
     public boolean addTransactionFor (String existingCustomer, double transaction) {
@@ -50,7 +54,7 @@ public class Branch {
     }
 
 
-    public static void listCustomers () {
+    /*public static void listCustomers () {
         System.out.println("Would you like to see customers and their transactions? 0/1");
         Scanner sc = new Scanner(System.in);
         int answer = sc.nextInt();
@@ -61,5 +65,5 @@ public class Branch {
                 customers.get(i).getTransactions();
             }
         }
-    }
+    }*/
 }

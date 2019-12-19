@@ -7,32 +7,22 @@ public class Customer {
     private static String name;
     private static ArrayList<Double> transactions;
 
-    public Customer(String name, double transaction) {
+    public Customer(String name, double initialTransaction) {
         this.name = name;
         this.transactions = new ArrayList<Double>();
-        transactions.add(transaction);
+        addTransaction(initialTransaction);
     }
 
     public static String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        Customer.name = name;
+    public ArrayList<Double> getTransactions() {
+            return this.transactions;
     }
 
-    public static void getTransactions() {
-        for (int i = 0; i < transactions.size(); i++) {
-            System.out.println(transactions.get(i));
-        }
-    }
-
-    public static void setTransactions(ArrayList<Double> transactions) {
-        Customer.transactions = transactions;
-    }
-
-    public static void addTransaction(double transaction) {
-        transactions.add(transaction);
+    public void addTransaction(double transaction) {
+        this.transactions.add(transaction);
     }
 
 }

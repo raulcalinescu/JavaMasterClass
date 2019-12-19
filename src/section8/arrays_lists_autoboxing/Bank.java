@@ -6,7 +6,7 @@ public class Bank {
     private String name;
     private static ArrayList<Branch> branches;
 
-    public void addNewBranch(String name) {
+    public Bank(String name) {
         this.name = name;
         this.branches = new ArrayList<Branch>();
     }
@@ -18,10 +18,6 @@ public class Bank {
         }
 
         return false;
-    }
-
-    public void showCustomers(Branch branch) {
-        branch.listCustomers();
     }
 
     public boolean addCustomer(String branchName, String customerName, double initialAmount) {
@@ -41,9 +37,40 @@ public class Bank {
         return false;
     }
 
-    private
-
-    public static void main(String[] args) {
-
+    private Branch findBranch(String branchName) {
+        for(int i=0; i<this.branches.size(); i++) {
+            Branch checkedBranch = this.branches.get(i);
+            if(checkedBranch.getName().equals(branchName)) {
+                return checkedBranch;
+            }
+        }
+        return null;
     }
+
+    public boolean listCustomers(String branchName, boolean showTransactions) {
+        Branch branch = findBranch(branchName);
+        if(branch != null) {
+            System.out.println("Customer details for branch " + branch.getName());
+            ArrayList<Customer> branchCustomers = branch.getCustomers();
+
+            for (int i = 0; i < branchCustomers.size(); i++) {
+                Customer branchCustomer = branchCustomers.get(i);
+                System.out.println("Customer: " + branchCustomer.getName() + "[" + i + "]");
+
+                if (showTransactions) {
+                    System.out.println("Transactions");
+                    ArrayList<Double> transactions = branchCustomer.getTransactions();
+
+                    for (int j = 0; j < transactions.size(); j++) {
+                        System.out.println("[" + (j + 1) + "] Amount " + transactions.get(j));
+                    }
+                }
+            }
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }
