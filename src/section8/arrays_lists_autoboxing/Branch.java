@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Branch {
 
     private String name;
-    private static ArrayList<Customer> customers;
+    private ArrayList<Customer> customers;
 
     public Branch(String name) {
         this.name = name;
@@ -19,7 +19,7 @@ public class Branch {
 
     // make methods boolean to also check/return for data validation when setting new items
 
-    public boolean addNewCustomer (String newCustomer, Double initialTransaction) {
+    public boolean addNewCustomer (String newCustomer, double initialTransaction) {
         if (findCustomer(newCustomer) == null) {
             this.customers.add(new Customer(newCustomer, initialTransaction));
             return true;
@@ -32,13 +32,12 @@ public class Branch {
         return customers;
     }
 
-    public boolean addTransactionFor (String existingCustomer, double transaction) {
-        if(findCustomer(existingCustomer) != null) {
-            Customer customer = new Customer(existingCustomer,transaction);
-            customer.addTransaction(transaction);
+    public boolean addTransactionFor (String customerName, double transaction) {
+        Customer existingCustomer = findCustomer(customerName);
+        if(existingCustomer != null) {
+            existingCustomer.addTransaction(transaction);
             return true;
         }
-
         return false;
     }
 
