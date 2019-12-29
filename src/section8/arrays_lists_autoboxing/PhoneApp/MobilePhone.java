@@ -1,4 +1,6 @@
-package section8.arrays_lists_autoboxing;
+package section8.arrays_lists_autoboxing.PhoneApp;
+
+import section8.arrays_lists_autoboxing.PhoneApp.Contact;
 
 import java.util.ArrayList;
 

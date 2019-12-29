@@ -1,4 +1,6 @@
-package section8.arrays_lists_autoboxing;
+package section8.arrays_lists_autoboxing.BankApp;
+
+import section8.arrays_lists_autoboxing.BankApp.Bank;
 
 public class Main_BankApp {
 

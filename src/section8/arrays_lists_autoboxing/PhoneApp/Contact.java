@@ -1,4 +1,4 @@
-package section8.arrays_lists_autoboxing;
+package section8.arrays_lists_autoboxing.PhoneApp;
 
 public class Contact {
     private String name;
