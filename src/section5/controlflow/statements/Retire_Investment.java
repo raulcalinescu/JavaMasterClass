@@ -15,17 +15,21 @@ public class Retire_Investment {
         int monthlyAdd = sc.nextInt();
         System.out.println("Enter how many years you'd like to invest monthly: ");
         years = sc.nextInt();
-
+        System.out.println("Enter by how much more you'd like to invest monthly each year: ");
+        int increase = sc.nextInt();
+        int count_increase = 0;
         System.out.println("With a starting sum of $" + sum + ": \n");
 
-
-        for(int i = 1; i <= 40; i++) {
-            if (i <= years)
-                sum = (monthlyAdd * 12) + sum + sum * 0.1;
+        for(int i = 1; i <= 45; i++) {
+            if (i <= years) {
+                sum = ((monthlyAdd + count_increase) * 12) + sum + sum * 0.1;
+                count_increase += increase;
+            }
             else
                 sum = sum + sum * 0.1;
-            System.out.println("After " + i + " years you'll have $" + sum + ", with $" + (sum * 0.1) + " from compound " +
-                    "interest from previous year.\n");
+            System.out.println("After " + i + " years you'll have $" + sum); /*+ ", with $" + (sum * 0.1) + " from compound " +
+                    "interest from previous year.\n"); */
+            System.out.println("This year you invested $" + (monthlyAdd + count_increase - increase));
         }
     }
 }
